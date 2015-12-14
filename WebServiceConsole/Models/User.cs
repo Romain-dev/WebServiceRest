@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,8 @@ namespace WebServiceConsole.Models
         public String Password { get; set; }
 
         public User() { }
+
+        [JsonIgnore]
+        public virtual ICollection<TodoTask> TodoTasks { get; set; }
     }
 }

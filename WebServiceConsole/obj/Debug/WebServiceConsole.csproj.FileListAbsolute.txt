@@ -32,3 +32,5 @@ C:\Users\romain\Documents\Visual Studio 2015\Projects\WebServiceConsole\WebServi
 C:\Users\romain\Documents\Visual Studio 2015\Projects\WebServiceConsole\WebServiceConsole\obj\Debug\WebServiceConsole.Migrations.romain1.resources
 C:\Users\romain\Documents\Visual Studio 2015\Projects\WebServiceConsole\WebServiceConsole\obj\Debug\WebServiceConsole.Migrations.romain2.resources
 C:\Users\romain\Documents\Visual Studio 2015\Projects\WebServiceConsole\WebServiceConsole\obj\Debug\WebServiceConsole.Migrations.romain3.resources
+C:\Users\romain\Documents\Visual Studio 2015\Projects\WebServiceConsole\WebServiceConsole\obj\Debug\WebServiceConsole.Migrations.romain4.resources
+C:\Users\romain\Documents\Visual Studio 2015\Projects\WebServiceConsole\WebServiceConsole\obj\Debug\WebServiceConsole.Migrations.romain5.resources

@@ -34,8 +34,7 @@ namespace WebServiceConsole.Core
             else
             {
                 var id = new System.Security.Claims.ClaimsIdentity(OAuthDefaults.AuthenticationType);
-                id.Label = "toto";
-                id.AddClaim(new System.Security.Claims.Claim(ClaimTypes.Name, User.Id.ToString()));
+                id.AddClaim(new System.Security.Claims.Claim("Id", User.Id.ToString()));
                 
                 var ticket = new AuthenticationTicket(id,null);
                 context.Validated(ticket);

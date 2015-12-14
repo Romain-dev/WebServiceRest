@@ -10,6 +10,7 @@ namespace WebServiceConsole.Models
     {
         public int Id { get; set; }
         public String Title { get; set; }
+        public String Description { get; set; }
         public User User { get; set; }
         public bool IsTaskOver { get; set; }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -17,14 +18,13 @@ namespace WebServiceConsole.Controller
 
         public IEnumerable<TodoTask> Get()
         {
-            //Utiliser ça
-            var user = db.Users.Find(Int32.Parse(this.User.Identity.Name));
+            var user = db.Users.Find(Int32.Parse(((ClaimsIdentity)this.User.Identity).Claims.First().Value));
             return db.TodoTasks.Where(u => u.User.Id == user.Id).OrderBy(u => u.Title).ToList<TodoTask>();
         }
 
         public IHttpActionResult Get(int id)
         {
-            var user = db.Users.Find(Int32.Parse(this.User.Identity.Name));
+            var user = db.Users.Find(Int32.Parse(((ClaimsIdentity)this.User.Identity).Claims.First().Value));
 
             var todoTask = db.TodoTasks.Find(id);
 
@@ -45,7 +45,7 @@ namespace WebServiceConsole.Controller
                 BadRequest();
             }
 
-            var user = db.Users.Find(Int32.Parse(this.User.Identity.Name));
+            var user = db.Users.Find(Int32.Parse(((ClaimsIdentity)this.User.Identity).Claims.First().Value));
             todoTask.User = user;
             db.TodoTasks.Add(todoTask);
             db.SaveChanges();
@@ -54,7 +54,7 @@ namespace WebServiceConsole.Controller
 
         public bool Put(int id, TodoTask todoTask)
         {
-            var user = db.Users.Find(Int32.Parse(this.User.Identity.Name));
+            var user = db.Users.Find(Int32.Parse(((ClaimsIdentity)this.User.Identity).Claims.First().Value));
             var todo = db.TodoTasks.Find(todoTask.Id);
 
             if (todo == null || todo.User == null || todo.User.Id != user.Id)
@@ -73,7 +73,7 @@ namespace WebServiceConsole.Controller
 
         public bool Delete(int id)
         {
-            var user = db.Users.Find(Int32.Parse(this.User.Identity.Name));
+            var user = db.Users.Find(Int32.Parse(((ClaimsIdentity)this.User.Identity).Claims.First().Value));
             TodoTask todoTask = db.TodoTasks.Find(id);
 
             if (todoTask == null || todoTask.User == null || todoTask.User.Id != user.Id)

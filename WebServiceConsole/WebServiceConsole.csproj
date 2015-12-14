@@ -111,6 +111,14 @@
     <Compile Include="Migrations\201512120702096_romain3.Designer.cs">
       <DependentUpon>201512120702096_romain3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512141215425_romain4.cs" />
+    <Compile Include="Migrations\201512141215425_romain4.Designer.cs">
+      <DependentUpon>201512141215425_romain4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141224436_romain5.cs" />
+    <Compile Include="Migrations\201512141224436_romain5.Designer.cs">
+      <DependentUpon>201512141224436_romain5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Models\TodoTask.cs" />
@@ -135,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512120702096_romain3.resx">
       <DependentUpon>201512120702096_romain3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141215425_romain4.resx">
+      <DependentUpon>201512141215425_romain4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141224436_romain5.resx">
+      <DependentUpon>201512141224436_romain5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
